@@ -35,12 +35,12 @@ class UsuarioDAO{
         }
     }
 
-    public static function listarUsuarios($idusuario){ //==========
-        $sql = "select * from usuarios where idusuario!=?"; //==========
+    public static function listarUsuarios($idusuario){
+        $sql = "select * from usuarios where idusuario!=?";
 
         $conexao = ConexaoBD::conectar();
         $stmt = $conexao->prepare($sql);
-        $stmt->bindParam(1, $idusuario); //==========
+        $stmt->bindParam(1, $idusuario);
         $stmt->execute();
                 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
