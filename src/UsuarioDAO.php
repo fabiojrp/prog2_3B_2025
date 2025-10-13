@@ -29,7 +29,7 @@ class UsuarioDAO{
         $stmt->execute();
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);  
         if ($stmt->rowCount() > 0){
-            return $usuario['idusuario'];
+            return $usuario;
         }else{
             return false;
         }
@@ -44,6 +44,29 @@ class UsuarioDAO{
         $stmt->execute();
                 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function buscarUsuarioNome($nome, $idusuario){
+        $sql = "select * from usuarios where nome like ?";
+
+        $conexao = ConexaoBD::conectar();
+        $stmt = $conexao->prepare($sql);
+        $nome = "%".$nome."%";
+        $stmt->bindParam(1, $nome);
+        $stmt->execute();
+                
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function buscarUsuarioId($idusuario){
+        $sql = "select * from usuarios where idusuario=?";
+
+        $conexao = ConexaoBD::conectar();
+        $stmt = $conexao->prepare($sql);
+        $stmt->bindParam(1, $idusuario);
+        $stmt->execute();
+                
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
 ?>
