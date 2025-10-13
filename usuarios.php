@@ -19,7 +19,7 @@ include "incs/topo.php";
           $_GET["nome"] = "";
           $usuarios = [];
         }else{
-          $usuarios = UsuarioDAO::buscarUsuarioNome($_GET["nome"], $_SESSION["idusuario"]);
+          $usuarios = UsuarioDAO::buscarUsuarioParaSeguir($_GET["nome"], $_SESSION["idusuario"]);
         }
       
 
