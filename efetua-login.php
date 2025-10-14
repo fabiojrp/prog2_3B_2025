@@ -9,6 +9,8 @@
         $_SESSION['foto'] = $usuario['foto'];
         header("Location:index.php");
     }else{
+
+        
         $_SESSION['msg'] = "Usuário ou senha inválido.";
         header("Location:login.php");
     }
