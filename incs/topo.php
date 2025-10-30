@@ -22,6 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="#">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="meusamigos.php">Meus Amigos</a></li>
                     <li class="nav-item"><a class="nav-link active" href="usuarios.php">Usuários</a></li>
                     <li class="nav-item"><a class="nav-link active" href="logout.php">Logout</a></li>
                 </ul>
