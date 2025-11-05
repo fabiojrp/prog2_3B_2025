@@ -1,4 +1,5 @@
 <?php
+//cloudinary - Ifc.vd4!
 class Util
 {
     public static function salvarFoto()
