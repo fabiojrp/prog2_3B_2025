@@ -36,7 +36,7 @@ $postagens = PostagemDAO::listarTimeline($idLogado);
 
                 <!-- Foto da postagem -->
                 <?php if ($p['foto']): ?>
-                <img src="uploads/<?= $p['foto'] ?>" class="img-fluid rounded mt-2"
+                <img src="<?= $p['foto'] ?>" class="img-fluid rounded mt-2"
                     style="max-height: 200px; object-fit: cover;">
                 <?php endif; ?>
 
